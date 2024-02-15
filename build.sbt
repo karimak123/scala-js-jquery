@@ -2,7 +2,7 @@ lazy val root = project.in(file(".")).
   enablePlugins(ScalaJSPlugin)
 
 crossScalaVersions in ThisBuild := {
-  val allVersions = Seq("2.12.10", "2.11.12", "2.10.7", "2.13.1")
+  val allVersions = Seq("2.12.10", "2.11.12", "2.10.7", "2.13.1", "3.0.2", "3.1.0")
   if (scalaJSVersion.startsWith("0.6."))
     allVersions
   else
@@ -19,7 +19,7 @@ version := "1.0.1-SNAPSHOT"
 organization := "be.doeraene"
 
 libraryDependencies +=
-  "org.scala-js" %%% "scalajs-dom" % "1.0.0"
+  "org.scala-js" %%% "scalajs-dom" % "2.0.0"
 
 scalacOptions ++= Seq("-deprecation", "-feature", "-Xfatal-warnings")
 
